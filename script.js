@@ -63,6 +63,11 @@ async function renderShow() {
         link.href = code.src;
         link.click();
     });
+
+    shareButton.addEventListener("click", () => {
+        const code = document.querySelector("#qr-code > img");
+        navigator.clipboard.writeText(code.src);
+    });
 }
 
 
